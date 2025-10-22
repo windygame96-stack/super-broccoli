@@ -12,6 +12,6 @@ function getPlugins() {
 }
 
 export default defineConfig({
-  base: '/super-broccoli/',
+/**  base: '/super-broccoli/',*/
   plugins: getPlugins(),
 });
