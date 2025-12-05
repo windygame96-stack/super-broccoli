@@ -3,13 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="宏业电子厂解谜 | 互动解谜游戏" />
     <title>宏业电子厂解谜 | 互动解谜游戏</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       crossorigin="anonymous"
     />
-    <script type="module" crossorigin src="/super-broccoli/assets/index-CTcOZ5ZH.js"></script>
+    <!-- 添加404页面处理，支持GitHub Pages的SPA应用 -->
+    <script>
+      // 检测当前URL是否需要重定向到正确的路径
+      (function() {
+        // 仅在GitHub Pages环境下执行
+        const isGitHubPages = window.location.hostname === 'windygame96-stack.github.io' && 
+                            window.location.pathname.includes('/super-broccoli/');
+        
+        // 获取基础路径
+        const basePath = '/super-broccoli';
+        
+        // 如果是GitHub Pages环境，且不是主页或已知的路由路径，重定向到主页
+        if (isGitHubPages) {
+          // 检查当前路径是否以基础路径开头
+          if (!window.location.pathname.startsWith(basePath + '/') && 
+              window.location.pathname !== basePath) {
+            // 重定向到主页，但保持URL参数
+            const params = window.location.search;
+            window.location.href = basePath + '/#' + window.location.pathname + params;
+          }
+        }
+        
+        // 添加错误处理，捕获任何未处理的错误
+        window.addEventListener('error', function(e) {
+          console.error('页面加载错误:', e.error);
+        });
+      })();
+    </script>
+    <script type="module" crossorigin src="/super-broccoli/assets/index-wVBdEtEq.js"></script>
     <link rel="stylesheet" crossorigin href="/super-broccoli/assets/index-C0PBDQ8Q.css">
   </head>
   <body>
